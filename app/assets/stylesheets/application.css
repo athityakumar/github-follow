@@ -1,0 +1,507 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require bootstrap
+ *= require font-awesome
+ *= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
+ *= require_self
+ *= require_tree .
+ */
+
+/*Include all the ubuntu fonts*/
+/*@font-face {
+  font-family: "ubuntu-bold";
+  src: url('/assets/Ubuntu-B.ttf') format("truetype");
+}
+@font-face {
+  font-family: "ubuntu-light-italic";
+  src: url('/assets/Ubuntu-LI.ttf') format("truetype");
+}
+@font-face {
+  font-family: "ubuntu-medium";
+  src: url('/assets/Ubuntu-M.ttf') format("truetype");
+}
+@font-face {
+  font-family: "ubuntu-medium-italic";
+  src: url('/assets/Ubuntu-MI.ttf') format("truetype");
+}
+@font-face {
+  font-family: "ubuntu-regular";
+  src: url('/assets/Ubuntu-R.ttf') format("truetype");
+}*/
+@font-face {
+  font-family: "ubuntu-light";
+  src: url('/assets/Ubuntu-L.ttf') format("truetype");
+}
+html {
+  font-family: sans-serif;
+  font-size: 16px;
+  height: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+body {
+  font-family: "ubuntu-light";
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #fff;
+  margin: 0;
+  height: 100%;
+}
+/*p {
+  margin: 0 0 0px;
+}*/
+h1 {
+  font-size: 36px;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+img {
+  border: 0;
+  vertical-align: middle;
+}
+input {
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  line-height: normal;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+/*On focus input remove the placeholder*/
+input:focus::-webkit-input-placeholder { color: transparent; }
+input:focus:-moz-placeholder { color: transparent; }
+input:focus::-moz-placeholder { color: transparent; }
+input:focus:-ms-input-placeholder { color: transparent; }
+a {
+  background-color: transparent;
+  color: #337ab7;
+  text-decoration: none;
+}
+a:hover, a:focus {
+  text-decoration: none;
+  cursor: pointer;
+}
+.lead {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+.white-color {
+  color: #FFF !important;
+}
+.green-color {
+  color: #3BBC95;
+}
+.half-spaced {
+  padding-top: 10px;
+}
+.half-spaced-bottom {
+  padding-bottom: 10px;
+}
+.spaced {
+  padding-top: 20px;
+}
+.spaced-bottom {
+  padding-bottom: 20px;
+}
+.full-spaced {
+  padding-top: 30px;
+}
+.full-spaced-bottom {
+  padding-bottom: 30px;
+}
+.no-margin {
+  margin: 0 !important;
+}
+.sharp-corners {
+  border-radius: 0px !important;
+}
+/*.ubuntu-bold {
+  font-family: "ubuntu-bold";
+}
+.ubuntu-light-italic {
+  font-family: "ubuntu-light-italic";
+}
+.ubuntu-medium {
+  font-family: "ubuntu-medium";
+}
+.ubuntu-medium-italic {
+  font-family: "ubuntu-medium-italic";
+}
+.ubuntu-regular {
+  font-family: "ubuntu-regular";
+}*/
+.ubuntu-light {
+  font-family: "ubuntu-light";
+}
+/* Bootstrap Additional Class */
+.row-height {
+  display: table;
+  table-layout: fixed;
+  height: 100%;
+  width: 100%;
+}
+.col-height {
+  display: table-cell;
+  float: none;
+  height: 100%;
+}
+.col-top {
+  vertical-align: top;
+}
+.col-middle {
+  vertical-align: middle;
+}
+.col-bottom {
+  vertical-align: bottom;
+}
+.col-no-gutter {
+  padding: 0;
+}
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
+/*Align bootstrap modal to center of the window*/
+.modal.fade {
+  -webkit-transition: opacity .15s linear, top .25s ease-out;
+  -moz-transition: opacity .15s linear, top .25s ease-out;
+  -o-transition: opacity .15s linear, top .25s ease-out;
+  transition: opacity .15s linear, top .25s ease-out;
+}
+.modal-vertical-align-helper {
+  display:table;
+  height: 100%;
+  width: 100%;
+  pointer-events:none;
+}
+.modal-vertical-center {
+  display: table-cell;
+  vertical-align: middle;
+  pointer-events:none;
+}
+.modal-content {
+  width:inherit;
+  height:inherit;
+  margin: 0 auto;
+  pointer-events: all;
+}
+.flat-input {
+  border-radius: 0px 0px 0px 0px;
+  border-width: 0px 0px 1px;
+  border-style: none none solid;
+  -moz-border-top-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  border-image: none;
+  border-color: -moz-use-text-color -moz-use-text-color rgb(204, 204, 204);
+  box-shadow: none;
+  margin-bottom: 5px;
+  padding: 6px 12px;
+  background-color: #fff;
+  background-image: none;
+  -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.flat-input:focus {
+  border-radius: 0px 0px 0px 0px;
+  border-width: 0px 0px 1px;
+  border-style: none none solid;
+  -moz-border-top-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  border-image: none;
+  box-shadow: none;
+  margin-bottom: 5px;
+  border-color: #66afe9;
+  outline: 0;
+}
+.parsley-errors-list {
+  margin: 0px;
+  list-style-type: none;
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 0px;
+  font-size: 10px;
+  color: red;
+}
+.social-floater {
+  position: fixed;
+  top: 5px;
+  right: 0px;
+  width: 32px;
+  z-index: 10;
+}
+.social-profile {
+  position: absolute;
+  z-index: 10;
+}
+.black-background {
+  background: #000;
+  color: #fff;
+}
+.light-dark-background {
+  background-color:  #142a38;
+  color: #fff;
+}
+.dark-background {
+  background-color:  #061118;
+  color: #fff;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.top-strip {
+  top: 0;
+  width: 100%;
+  height: 5px;
+  background: url(/assets/tile.png);
+  background-size: 344px 5px, cover;
+}
+.logo {
+  width: 232px;
+}
+/*Placeholder must be right align */
+/* webkit solution */
+/*#section_1 .early-access-text::-webkit-input-placeholder { text-align:right; }*/
+/* mozilla solution */
+/*#section_1 .early-access-text:-moz-placeholder { text-align:right; }*/
+::-webkit-input-placeholder { color: #c4c4c4; }
+:-moz-placeholder { color: #c4c4c4; }
+/*Custom Padding for each section*/
+.custom-padding {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+#section_2 .custom-padding, #section_5 .custom-padding {
+  padding: 15px 20% 15px 10%;
+}
+#section_4 .custom-padding {
+  padding-left: 25%;
+  padding-right: 0%;
+}
+#section_6 .custom-padding, #section_8 .custom-padding {
+  padding-left: 25%;
+  padding-right: 25%;
+}
+#section_7 .custom-padding {
+  padding-left: 22%;
+  padding-right: 0%;
+}
+/*For all headings*/
+.heading {
+  font-size: 30px;
+  font-weight: 300;
+  text-align: left;
+  padding-bottom: 20px;
+}
+#section_2 .heading, #section_6 .heading {
+  color:  #ff6549;
+}
+#section_3 .heading {
+  color:  #31ab86;
+}
+#section_4 .heading {
+  color:  #1277b7;  
+}
+#section_5 .heading {
+  color:  #ff7f6b;
+}
+#section_7 .heading, #section_8 .heading {
+  color:  #ef215f;
+}
+/*For all paragraph's*/
+.note {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+#section_2 .note, #section_5 .note, #section_7 .note {
+  color:  #fff;
+}
+#section_3 .note, #section_4 .note, #section_6 .note, #section_8 .note {
+  color:  #142a38;
+}
+#section_3 .note .highlight, #section_5 .note .highlight, #section_7 .note .highlight {
+  color:  #ef215f;
+  font-style: italic;
+  font-weight: normal;
+}
+#section_7 .note .highlight-bold { 
+  color:  #ef215f;
+  font-weight: 700;
+}
+#section_1 .heading {
+  color:  #142a38;
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 32px;
+  text-align: right;
+  padding-top: 25px;
+}
+.early-access-text {
+  /*color:  #ababab;*/
+  color:  #999999;
+  text-align: left;
+  height: 34px;
+  width: 300px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  padding: 6px 12px 6px 0px;
+}
+.early-access-text:focus {
+  padding: 6px 12px;
+}
+#section_1 .early-access-btn {
+  border: 5px solid transparent;
+  background-color:  #ef215f;
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.39);
+  width: 300px;
+  height: 50px;
+  color:  #fff !important;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: center;
+  margin-top: 5px;
+  letter-spacing: 1px;
+}
+#section_3 .carousel-caption {
+  text-shadow: none;
+  text-align: justify;
+  color: #000;
+  position: absolute;
+  top: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  height: 100%;
+}
+#section_3 .card {
+  border: 1px solid #ccc;
+  background-color: #FFF;
+  padding: 30px;
+}
+#section_7 .conceirge-btn {
+  border-radius: 5px;
+  background-color:  #1793e0;
+  padding: 20px 80px;
+  height: 61px;
+  color: #fff;
+}
+#section_9 .subscribe-padding {
+  margin-left: 13%;
+}
+#section_9 .subscribe-heading {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 30px;
+  text-align: left;
+}
+#section_9 .subscribe-btn {
+  color: #ffffff;
+  border-radius: 0px 5px 5px 0px;
+  background-color:  #ef215f;
+  padding: 10px 40px;
+}
+#section_9 .teams .heading{
+  color:  #ff826b;
+  font-size: 30px;
+  text-align: center;
+}
+#section_9 .teams .team-profile {
+  font-size: 14px;
+  font-weight: 400;
+}
+#section_9 .teams .team-profile .name {
+  color:  #ff826b;
+  font-weight: 700;
+  padding-top: 20px;
+}
+#section_9 .teams .team-profile .designation {
+  color:  #ffffff;
+}
+#section_9 .teams .team-profile .description {
+  color:  #88a7ba;
+  padding: 10px 5px 0px 5px;
+}
+#section_9 .teams .team-profile img {
+  width: 170px;
+  height: 170px;
+}
+#section_9 .copyright {
+  color:  #446276;
+  font-size: 12px;
+}
+#request_access_modal .modal-body .highlight {
+  color:  #ef215f;
+  font-weight: 700;
+}
+#request_access_modal .modal-content {
+  border-radius: 0px;
+  box-shadow: none;
+}
+#request_access_modal .modal-body {
+  padding: 45px 90px;
+}
+#request_access_modal .modal-body .conceirge-btn {
+  border-radius: 5px;
+  background-color:  #1793e0;
+  padding: 12px 48px;
+  color: #fff;
+}
+#request_access_modal .early-access-text {
+  width: 250px;
+  font-size: 13px;
+}
+#request_access_modal .close {
+  position: absolute;
+  z-index: 1;
+  opacity: 1;
+  right: 10px;
+  top: 10px;
+}
+.tos-privacy a {
+  color: #88a7ba;
+}
+.tos-privacy a:hover {
+  color: #88a7ba;
+}
+
+.app-btn:hover
+{
+  text-decoration: none;
+  color: #fff;
+}

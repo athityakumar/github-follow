@@ -1,0 +1,12 @@
+<div class="width: 100%; padding: 10px; text-align: center;"> <br>
+<p> Dear Athitya , </p>
+<ul>
+<% @mailed.each do |m| %>
+   <% if m["mailed"] %>
+    <li> User <a href="https://github.com/<%= m["username"] %>" target="_blank" style="text-decoration: none;"> <%= m["username"] %> </a> had their notification mailed today.</li>
+  <% else %>
+    <li> User <a href="https://github.com/<%= m["username"] %>" target="_blank" style="text-decoration: none;"> <%= m["username"] %> </a> had no notification mailed today. </li>
+  <% end %>
+<% end %>
+</ul>
+</div>

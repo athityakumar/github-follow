@@ -1,0 +1,11 @@
+<div class="width: 100%; padding: 10px; text-align: center;"> <br>
+Dear <a href="https://github.com/<%= @username %>" target="_blank" style="text-decoration: none;"> <%= @username %></a>, <br>                           
+<ul>
+<% @addnot.each do |n| %>
+    <li> <a href="https://github.com/<%= n %>" target="_blank" style="text-decoration: none;"> <%= n %> </a> followed you.</li>
+<% end %>
+<% @remnot.each do |n| %>
+    <li> <a href="https://github.com/<%= n %>" target="_blank" style="text-decoration: none;"> <%= n %> </a> unfollowed you.</li>
+<% end %>
+</ul>
+</div>

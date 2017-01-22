@@ -1,0 +1,91 @@
+<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+  <tbody>
+    <tr>
+      <td valign="middle">
+        <div class="container-fluid" id="fullpage">
+          <section class="section" id="section_1">
+            <div class="row light-dark-background affix" style="width: 100%; z-index: 999;">
+              <div class="col-xs-12 half-spaced half-spaced-bottom text-center">
+                <div class="copyright"> The GitHub Follower Notification App</div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="row-sm-height">
+                <div class="col-sm-4 col-sm-height col-middle col-xs-12 col-no-gutter">
+                  <%= image_tag "/assets/github.gif", width: "100%", height: "100%", alt: "Banner for App", :class => "img-responsive", align: "middle" %>
+                </div>
+                <div class="col-sm-8 col-sm-height col-middle col-xs-12 col-no-gutter">
+                  <div class="custom-padding">
+                    <div class="heading" style="text-align: center;">Hello, <%= @name %>. </div>
+                    <div class="note">
+                      <p>You have succesfully logged in as <%= @username %>. From now on, you'll receive an email to <%= @email %> when anyone follows / unfollows you.</p>
+                      <p>If you liked this project, do star the <a href="https://github.com/athityakumar/github-follow" target="_blank">repository</a> and <a href="https://github.com/athityakumar" target="_blank">follow me</a> for updates of such interesting projects.</p>
+                      <p>To stop receiving these emails, all you have to do is to revoke the App's access at <i>GitHub > Settings > Authorized Applications </i>.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section" id="section_2">
+            <div class="row">
+              <div class="row-sm-height">
+                <div class="hidden-xs col-sm-7 col-sm-height col-middle col-xs-12 col-no-gutter black-background">
+                  <%= image_tag "/assets/github2.gif", width: "100%", height: "100%", alt: "GitHub gif", :class => "img-responsive", align: "middle" %>
+                </div>
+                <div class="col-sm-5 col-sm-height col-middle col-xs-12 col-no-gutter black-background">
+                  <div class="custom-padding">
+                    <div class="heading">How does the App work?</div>
+                    <div class="note">
+                      <p>This GitHub App is built with <i>Ruby on rails</i>, <i>postgres</i> database and is deployed to <i>heroku</i>. It runs as a cron job every day. </p>
+                      <p>The App is compatible with the <i>GitHub API v3</i> and runs <i>curl statements</i> from the system, to get your current follower list. Netx, it compares this list with your previously stored follower list in the database. Finally, if there are any new notifications, it shoots you a mail.</p>
+                      <p>If you liked this project, do star the <a href="https://github.com/athityakumar/github-follow" target="_blank">repository</a> and <a href="https://github.com/athityakumar" target="_blank">follow me</a> for updates of such interesting projects.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section" id="section_9">
+            <div class="row">
+              <div class="col-xs-12 full-spaced full-spaced-bottom dark-background">
+                <div class="row">
+                  <div class="col-md-10 col-sm-11 col-xs-12 col-centered spaced spaced-bottom teams">
+                    <div class="row">
+                      <div class="col-xs-12">
+                        <div class="heading">About the Developer</div>
+                      </div>
+                    </div>
+                    <div class="row team-profile">
+                      <div class="col-sm-4 col-xs-12 text-center spaced">
+                        <div class="half-spaced" style="border-radius: 50% 50%;"><%= image_tag "/assets/ak.png", width: "100%", height: "100%" %></div>
+                        <div class="name">ATHITYA KUMAR</div>
+                        <br>
+                        <a class="btn app-btn light-dark-background" href="https://www.facebook.com/athitya.kumar" target="_blank" style="font-size: 25px;"><i class="fa fa-facebook"></i></a>
+                        <a class="btn app-btn light-dark-background" href="https://github.com/athityakumar/" target="_blank" style="font-size: 25px;"><i class="fa fa-github"></i></a>
+                        <a class="btn app-btn light-dark-background" href="https://www.linkedin.com/in/athitya-kumar-a152a8a9" target="_blank" style="font-size: 25px;"><i class="fa fa-linkedin"></i></a>
+                        <a class="btn app-btn light-dark-background" href="https://athityakumar.github.io/" target="_blank" style="font-size: 25px;"><i class="fa fa-home"></i></a>
+                      </div>
+                      <div class="col-sm-8 col-xs-12 text-center spaced">
+                        <br>
+                        <div class="designation"> ATHITYA KUMAR</div>
+                        <div class="description">
+                        <br>     I'm an under-grad student from IIT Kharagpur, India. I'm currently in my 3rd year of the Mechanical Engineering 5-year Dual-degree course. <br><br> Under the hood of the "Mechanical Engineer", lies many personas such as - Web Developer, Software Developer, Chess player, Carnatic vocalist and Blogger who also like watching TV Series'.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row light-dark-background">
+              <div class="col-xs-12 half-spaced half-spaced-bottom text-center">
+                <div class="copyright">MIT License | GitHub Follower Notification App</div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

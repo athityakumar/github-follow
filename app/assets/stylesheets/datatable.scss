@@ -1,0 +1,101 @@
+.select-style {
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
+  width: 225px;
+  border-radius: 3px;
+  overflow: hidden;
+  background-color: #fff;
+  background: #fff url("/assets/arrowdown.gif") no-repeat 96% 50%;
+  select {
+    padding: 5px 8px;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+table.dataTable {
+  thead {
+    th {
+      position: relative;
+      background-image: none !important;
+      &.sorting:after, &.sorting_asc:after, &.sorting_desc:after {
+        position: absolute;
+        top: 12px;
+        right: 8px;
+        display: block;
+        font-family: FontAwesome;
+      }
+      &.sorting:after {
+        content: "\f0dc";
+        color: #ddd;
+        font-size: 0.8em;
+        padding-top: 0.12em;
+      }
+      &.sorting_asc:after {
+        content: "\f0de";
+      }
+      &.sorting_desc:after {
+        content: "\f0dd";
+      }
+    }
+  }
+}
+#inbound_datatable, #twitter_datatable, #concierge_datatable, #twitter_tweet_datatable, #twitter_tweet_all_datatable{
+  button {
+    &.custom-dropdown-btn {
+      background-color: #FFF;
+      border: 1px solid #DCDCDC;
+      padding: 0px 5px;
+    }
+  }
+  ul {
+    &.custom-dropdown-menu {
+      right: 0 !important;
+      left: auto;
+      background: #FFF;
+      border: 1px solid #DCDCDC;
+      line-height: 15px;
+      padding: 10px;
+      > li {
+        > a {
+          font-size: 13px;
+          padding: 6px 20px;
+          cursor:pointer;
+        }
+      }
+    }
+  }
+  .dataTables_processing {
+    margin-left: initial;
+    top: initial;
+    left: initial;
+    margin-top: -35px;
+    padding-top: initial;
+    padding-bottom: initial;
+    background: none;
+    border: 0 none;
+  }
+  .dataTables_paginate {
+    margin: 20px 0px;
+    text-align: center;
+  }
+}
+
+#inboundFollowerSearch, #twitterFollowerSearch, #conciergeSearch, #twitterTweetSearch, #twitterTweetAllSearch {
+  padding-left: 5px;
+  border: 1px solid #DCDCDC;
+  height: 32px;
+}
+
+#inbound_followers, #twitter_followers, #concierge, #twitterTweet, #twitterTweetAll {
+  border-top: 1.5px solid #000;
+}
