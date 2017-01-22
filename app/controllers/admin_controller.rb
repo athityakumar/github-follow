@@ -21,12 +21,17 @@ class AdminController < ApplicationController
         @access_token = e
       end
       session[:access_token] = @access_token
+      session[:username] = @username
+      session[:name] = @name
+      session[:email] = @email
       redirect_to "/admin"
     else
       if session[:access_token].nil?
         redirect_to "/"
       else
-        @response = session[:access_token]
+        @username = session[:username]
+        @name = session[:name]
+        @email = session[:email]
       end
     end
   end
