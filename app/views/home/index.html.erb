@@ -20,12 +20,12 @@
                   <div class="custom-padding">
                     <div class="heading" style="text-align: center;">About the App</div>
                     <div class="note">
-                      <p>If you're a Developer, you're most probably familiar with GitHub &amp; its notification system. Currently, GitHub provides email notifications to watches repositories &amp;  mentions. However, GitHub fails to provide a similar email notification when someone follows / unfollows you. </p>
+                      <p>If you're a Developer, you're most probably familiar with GitHub &amp; its notification system. Currently, GitHub provides email notifications to watched repositories &amp;  mentions. However, GitHub fails to provide a similar email notification when someone follows / unfollows you. </p>
                       <p>This GitHub App solves this issue by mailing the users on a daily basis if they have any new followers / unfollowers - to the email ID which is associated with their GitHub account. To use this App, just click the button below &amp; authorize this App to access your public information. As simple as that.<br></p>
                     </div>
                     <div class="row">
                     <div class="col-sm-4 col-sm-offset-4">
-                      <a class="btn app-btn light-dark-background" href="https://github.com/login/oauth/authorize?client_id=<%= ENV["CLIENT_ID"] %>&client_secret=<%= ENV["CLIENT_SECRET"] %>&redirect_uri=<%= ENV["REDIRECT_URI"] %>" style="width: 100%; font-size: 15px;">LOGIN WITH GITHUB</a>
+                      <a class="btn app-btn light-dark-background" href="https://github.com/login/oauth/authorize?client_id=<%= ENV["CLIENT_ID"] %>&client_secret=<%= ENV["CLIENT_SECRET"] %>&redirect_uri=<%= ENV["REDIRECT_URI"] %>" style="width: 100%; font-size: 15px;">ACTIVATE SERVICE</a>
                       </div>
                       </div>
 
@@ -45,7 +45,7 @@
                     <div class="heading">How does the App work?</div>
                     <div class="note">
                       <p>This GitHub App is built with <i>Ruby on rails</i>, <i>postgres</i> database and is deployed to <i>heroku</i>. It runs as a cron job every day. </p>
-                      <p>The App is compatible with the <i>GitHub API v3</i> and runs <i>curl statements</i> from the system, to get your current follower list. Netx, it compares this list with your previously stored follower list in the database. Finally, if there are any new notifications, it shoots you a mail.</p>
+                      <p>The App is compatible with the <i>GitHub API v3</i> and runs <i>curl statements</i> from the system, to get your current follower list. Next, it compares this list with your previously stored follower list in the database. Finally, if there are any new notifications, it shoots you a mail.</p>
                       <p>If you liked this project, do star the <a href="https://github.com/athityakumar/github-follow" target="_blank">repository</a> and <a href="https://github.com/athityakumar" target="_blank">follow me</a> for updates of such interesting projects.</p>
                     </div>
                   </div>
