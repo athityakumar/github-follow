@@ -26,17 +26,8 @@ gem 'jquery-datatables-rails', '~> 3.4'
 gem 'will_paginate', '~> 3.1'
 gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
 
-# Kick out synchronous delaying guys and process as queues, asynchronously!
-gem 'sidekiq'
-
-# Sidekiq strategy to support a granular queue control – limiting, pausing, blocking, querying.
-gem 'sidekiq-limit_fetch'
-
 # Adds a Redis::Namespace class which can be used to namespace calls to Redis. This is useful when using a single instance of Redis with multiple, different applications.
 gem 'redis-namespace'
-
-# if you require 'sinatra' you get the DSL extended to Object
-gem 'sinatra', :require => nil
 
 # Rails Cron
 gem 'whenever', '~> 0.9.4', require: false
