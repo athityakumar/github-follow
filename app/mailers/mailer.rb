@@ -1,8 +1,9 @@
 class Mailer < ApplicationMailer
  
-    def notification_mailer addnot , remnot , todate , username , email
-        @addnot = addnot
-        @remnot = remnot
+    def notification_mailer olddata , newdata , todate , username , email
+        @addnot = (newdata-olddata).uniq
+        @remnot = (olddata-newdata).uniq
+        @count = newdata.uniq.count
         @username = username
         mail(to: email, subject: "GitHub Follower App Notifications | Dated #{todate}")
     end

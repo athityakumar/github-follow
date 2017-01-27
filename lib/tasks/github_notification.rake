@@ -34,7 +34,7 @@ namespace :github_notification do
           if ((newdata-olddata) + (olddata-newdata)) == []
             mailed_today.push({"username" => username, "mailed" => false})
           else
-            Mailer.notification_mailer((newdata-olddata).uniq,(olddata-newdata).uniq,Date.today.strftime("%d/%m/%Y"),username,email).deliver_now 
+            Mailer.notification_mailer(olddata.uniq,newdata.uniq,Date.today.strftime("%d/%m/%Y"),username,email).deliver_now 
             puts "Mail sent"
             mailed_today.push({"username" => username, "mailed" => true})
           end
