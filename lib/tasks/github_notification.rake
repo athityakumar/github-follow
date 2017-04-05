@@ -44,7 +44,7 @@ namespace :github_notification do
         end
         `curl -s #{ping_url}`
       end
-      Mailer.admin_mailer(mailed_today,Date.today.strftime("%d/%m/%Y"),"athityakumar@gmail.com").deliver_now
+      Mailer.admin_mailer(mailed_today,Date.today.strftime("%d/%m/%Y"),"athityakumar@gmail.com").deliver_now unless mailed_today.count { |m| m["mailed"] } == 0
     end
   end
 end
