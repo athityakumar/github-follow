@@ -1,4 +1,2 @@
-public/404.html linguist-vendored
-public/422.html linguist-vendored
-public/500.html linguist-vendored
 app/assets/javascripts/* linguist-vendored
+../../../public/* linguist-vendored
