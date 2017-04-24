@@ -1,2 +1,2 @@
 app/assets/javascripts/* linguist-vendored
-../../../public/* linguist-vendored
+public/* linguist-vendored
