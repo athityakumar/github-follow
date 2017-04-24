@@ -24,8 +24,9 @@ namespace :github_notification do
           end
           puts n
           for i in (1..n)
-            foll += JSON.parse(`#{curl_statement} '#{api_link}?access_token=#{access_token}&per_page=#{per_page.to_s}&page=#{i.to_s}'`)
+            foll.push JSON.parse(`#{curl_statement} '#{api_link}?access_token=#{access_token}&per_page=#{per_page.to_s}&page=#{i.to_s}'`)
           end
+          foll = foll.flatten
           foll.each do |f|
             newdata.push(f["login"])
             puts f["login"]
